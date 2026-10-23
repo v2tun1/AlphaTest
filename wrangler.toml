@@ -10,7 +10,7 @@ ALPHA_GITHUB_REPO = ""
 [[d1_databases]]
 binding = "DB"
 database_name = "alpha-panel-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "d7fd9e69-12df-4e8b-a815-4d2d2334d6eb"
 migrations_dir = "migrations"
 
 # Set these as encrypted Worker secrets, never in this file:
