@@ -1,0 +1,18 @@
+name = "alpha-panel"
+main = "src/alpha-worker.js"
+compatibility_date = "2026-10-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Set ALPHA_GITHUB_REPO only after the final GitHub repository exists.
+ALPHA_GITHUB_REPO = ""
+
+[[d1_databases]]
+binding = "DB"
+database_name = "alpha-panel-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+# Set these as encrypted Worker secrets, never in this file:
+# wrangler secret put CF_API_TOKEN
+# wrangler secret put CF_ACCOUNT_ID
