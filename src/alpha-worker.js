@@ -5193,6 +5193,18 @@ button:hover{filter:brightness(1.12);box-shadow:0 8px 26px var(--alpha-glow)!imp
 ::-webkit-scrollbar-track{background:rgba(4,12,29,.6)!important}::-webkit-scrollbar-thumb{background:rgba(var(--alpha-accent-rgb),.55)!important;border-radius:8px}
 @media(max-width:768px){header{max-width:calc(100% - 14px);margin-top:7px;border-radius:15px}main{padding-top:14px!important}main>div,#stats-accordion-wrapper,#users-table-container{border-radius:15px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Final Alpha Glass overrides: take precedence over the legacy Forge skin. */
+:root{--forge-orange:var(--alpha-accent);--forge-orange-hi:var(--alpha-accent-2);--forge-accent:var(--alpha-accent);--forge-accent2:var(--alpha-accent-2);--forge-glow:var(--alpha-glow);--forge-edge:var(--alpha-glass-line)}
+body,body.dark{background-color:#050b1b!important;color:var(--alpha-text)!important}
+header,header>div{background:rgba(5,13,34,.72)!important;border-color:var(--alpha-glass-line)!important}
+main>div:first-child,main>div,main section,main article,#stats-accordion-wrapper,#users-table-container,#user-modal-card,#settings-modal>div,#update-modal>div{background:linear-gradient(135deg,rgba(19,42,82,.66),rgba(7,18,43,.72))!important;border:1px solid var(--alpha-glass-line)!important;border-radius:20px!important;backdrop-filter:blur(22px) saturate(150%)!important;-webkit-backdrop-filter:blur(22px) saturate(150%)!important;box-shadow:0 18px 45px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.13)!important}
+#stats-accordion-wrapper>div>div,#users-table-container table,#users-table-container thead,#users-table-container th,#users-table-container td,.user-modal-tab-btn,#search-input,#filter-status,#sort-users{background:rgba(9,24,53,.62)!important;border-color:var(--alpha-glass-line)!important;color:var(--alpha-text)!important}
+#users-table-container tbody tr:hover{background:rgba(var(--alpha-accent-rgb),.14)!important}
+#user-modal-card,#settings-modal>div,#update-modal>div{background:linear-gradient(135deg,rgba(19,42,82,.94),rgba(7,18,43,.96))!important}
+.bg-blue-600,.bg-green-600,button.bg-blue-600,button.bg-green-600,.user-modal-tab-btn.active{background:linear-gradient(125deg,var(--alpha-accent),var(--alpha-accent-2))!important;color:#fff!important;border-color:transparent!important;box-shadow:0 8px 25px var(--alpha-glow)!important}
+.text-blue-600,.text-blue-500,.dark\:text-blue-400,.text-green-600,.text-green-500,.dark\:text-green-400{color:var(--alpha-accent)!important}
+.border-blue-500,.border-blue-600,.hover\:border-blue-400:hover,.hover\:border-green-400:hover{border-color:var(--alpha-accent)!important}
+#stats-accordion-wrapper>div>div:hover,#users-table-container tbody tr:hover{box-shadow:0 10px 28px rgba(var(--alpha-accent-rgb),.18)!important}
 </style>
 </head>
 <body class="bg-gray-100 dark:bg-amoled-bg text-gray-900 dark:text-zinc-100 min-h-screen transition-colors duration-200">
@@ -11304,6 +11316,12 @@ const WORKER_DONATE_URL = "https://si-491177.taile4bcbb.ts.net/donate";
 			root.style.setProperty('--alpha-accent-2',theme.accent2);
 			root.style.setProperty('--alpha-glass-line','rgba('+theme.rgb+',.38)');
 			root.style.setProperty('--alpha-glow','rgba('+theme.rgb+',.25)');
+			root.style.setProperty('--forge-orange',theme.accent);
+			root.style.setProperty('--forge-orange-hi',theme.accent2);
+			root.style.setProperty('--forge-accent',theme.accent);
+			root.style.setProperty('--forge-accent2',theme.accent2);
+			root.style.setProperty('--forge-glow','rgba('+theme.rgb+',.25)');
+			root.style.setProperty('--forge-edge','rgba('+theme.rgb+',.38)');
 			localStorage.setItem('alpha-glass-theme',key);
 			document.querySelectorAll('.alpha-color-choice').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.alphaTheme===key)));
 			const label=document.getElementById('alpha-theme-name');
