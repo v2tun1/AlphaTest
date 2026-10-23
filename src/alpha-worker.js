@@ -5165,7 +5165,36 @@ button:active{transform:translateY(1px) scale(.985)}
 #users-table-container button,#stats-accordion-wrapper button{border-color:#435054}
 @media(min-width:1024px){header>div,main{width:calc(100% - 28px)!important}#stats-accordion-wrapper>div{grid-template-columns:repeat(4,minmax(0,1fr))!important}#users-table-container{min-height:390px}}
 @media(max-width:768px){main{padding-left:10px!important;padding-right:10px!important}#stats-accordion-wrapper>div{grid-template-columns:repeat(2,minmax(0,1fr))!important}#users-table-container{padding:6px!important}}
-</style></head>
+</style>
+<style id="alpha-glass-theme">
+:root{--alpha-accent:#3987ff;--alpha-accent-rgb:57,135,255;--alpha-accent-2:#9a5cff;--alpha-glass:rgba(13,27,58,.62);--alpha-glass-strong:rgba(7,17,39,.86);--alpha-glass-line:rgba(var(--alpha-accent-rgb),.34);--alpha-glow:rgba(var(--alpha-accent-rgb),.24);--alpha-text:#edf5ff}
+html,body{min-height:100%;background:#050b1b!important;color:var(--alpha-text)!important}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(var(--alpha-accent-rgb),.23),transparent 38%),radial-gradient(ellipse at 92% 16%,rgba(154,92,255,.2),transparent 32%),radial-gradient(ellipse at 80% 100%,rgba(var(--alpha-accent-rgb),.12),transparent 42%),linear-gradient(135deg,#04091a,#07142d 52%,#040817)!important;background-attachment:fixed!important}
+body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(#000,transparent 90%)}
+.bg-canvas,.ambient,.vignette{z-index:0!important;opacity:.5}
+header{background:rgba(5,13,34,.72)!important;border:1px solid rgba(255,255,255,.1)!important;border-radius:20px;margin:12px auto 0;max-width:calc(100% - 24px);backdrop-filter:blur(24px) saturate(165%)!important;-webkit-backdrop-filter:blur(24px) saturate(165%)!important;box-shadow:0 12px 44px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.12)!important}
+main{position:relative;z-index:2!important;max-width:1500px!important;padding-top:24px!important}
+main>div,main section,main article,#stats-accordion-wrapper,#users-table-container,#user-modal-card,#settings-modal>div,#update-modal>div{background:linear-gradient(135deg,rgba(19,42,82,.66),rgba(7,18,43,.72))!important;border:1px solid var(--alpha-glass-line)!important;border-radius:20px!important;box-shadow:0 18px 45px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.13),inset 0 -1px rgba(255,255,255,.035)!important;backdrop-filter:blur(22px) saturate(150%)!important;-webkit-backdrop-filter:blur(22px) saturate(150%)!important}
+#stats-accordion-wrapper>div>div,#users-table-container table,#users-table-container td,#users-table-container th,.user-modal-tab-btn{background:rgba(9,24,53,.55)!important;border-color:rgba(255,255,255,.11)!important}
+#users-table-container tbody tr:hover{background:rgba(var(--alpha-accent-rgb),.12)!important}
+input,select,textarea{background:rgba(3,12,31,.64)!important;color:#f2f7ff!important;border:1px solid rgba(255,255,255,.16)!important;border-radius:12px!important;backdrop-filter:blur(12px)}
+input::placeholder,textarea::placeholder{color:#8fa7ca!important}
+input:focus,select:focus,textarea:focus{border-color:var(--alpha-accent)!important;box-shadow:0 0 0 3px var(--alpha-glow)!important;outline:none!important}
+button{border-radius:12px!important;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease!important}
+button:hover{filter:brightness(1.12);box-shadow:0 8px 26px var(--alpha-glow)!important}
+.bg-blue-600,.bg-green-600,button.bg-blue-600,button.bg-green-600,.user-modal-tab-btn.active{background:linear-gradient(125deg,var(--alpha-accent),var(--alpha-accent-2))!important;color:#fff!important;border-color:transparent!important;box-shadow:0 8px 25px var(--alpha-glow)!important}
+.text-blue-600,.text-blue-500,.dark\:text-blue-400{color:var(--alpha-accent)!important}
+.border-blue-500,.border-blue-600,.focus\:ring-blue-500{border-color:var(--alpha-accent)!important}
+#theme-palette{background:rgba(6,17,40,.62);border:1px solid var(--alpha-glass-line);border-radius:16px;padding:14px;box-shadow:inset 0 1px rgba(255,255,255,.1)}
+.alpha-color-choice{width:34px;height:34px;border-radius:50%!important;border:2px solid rgba(255,255,255,.45)!important;box-shadow:0 0 0 3px rgba(255,255,255,.04),0 5px 16px #0005!important;position:relative;padding:0!important}
+.alpha-color-choice[aria-pressed="true"]:after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:white;font-weight:900;text-shadow:0 1px 4px #000}
+.alpha-glass-label{color:#d9e8ff!important}
+#toast-container>div{background:rgba(7,20,47,.9)!important;border:1px solid var(--alpha-glass-line)!important;backdrop-filter:blur(18px)!important;border-radius:14px!important}
+::-webkit-scrollbar-track{background:rgba(4,12,29,.6)!important}::-webkit-scrollbar-thumb{background:rgba(var(--alpha-accent-rgb),.55)!important;border-radius:8px}
+@media(max-width:768px){header{max-width:calc(100% - 14px);margin-top:7px;border-radius:15px}main{padding-top:14px!important}main>div,#stats-accordion-wrapper,#users-table-container{border-radius:15px!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
 <body class="bg-gray-100 dark:bg-amoled-bg text-gray-900 dark:text-zinc-100 min-h-screen transition-colors duration-200">
 	<canvas id="waves" class="bg-canvas"></canvas>
 	<header class="border-b border-gray-200 dark:border-amoled-border bg-gray-50/95 dark:bg-amoled-card/95 px-4 py-3 md:py-4 relative z-10 md:sticky md:top-0 md:z-40 backdrop-blur-md">
@@ -6587,6 +6616,20 @@ button:active{transform:translateY(1px) scale(.985)}
 				</button>
 			</div>
 			<div class="p-6 space-y-4 overflow-y-auto flex-1 overscroll-contain">
+				<section id="theme-palette" class="space-y-3">
+					<div class="flex items-center justify-between gap-3"><div><h4 class="text-sm font-black alpha-glass-label">🎨 رنگ و ظاهر شیشه‌ای</h4><p class="text-[11px] mt-1 text-blue-100/70">رنگ انتخابی روی دکمه‌ها، نوارها، کادرها و نورهای قالب اعمال می‌شود.</p></div><span class="text-[10px] px-2 py-1 rounded-full border border-white/15 text-blue-100">GLASS UI</span></div>
+					<div class="flex flex-wrap gap-3" role="group" aria-label="انتخاب رنگ قالب">
+						<button type="button" class="alpha-color-choice" data-alpha-theme="blue" style="background:linear-gradient(135deg,#3987ff,#9a5cff)" aria-label="آبی نئونی" title="آبی نئونی" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="cyan" style="background:linear-gradient(135deg,#06b6d4,#2563eb)" aria-label="فیروزه‌ای" title="فیروزه‌ای" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="purple" style="background:linear-gradient(135deg,#a855f7,#6366f1)" aria-label="بنفش" title="بنفش" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="pink" style="background:linear-gradient(135deg,#ec4899,#9333ea)" aria-label="صورتی" title="صورتی" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="red" style="background:linear-gradient(135deg,#f43f5e,#ea580c)" aria-label="قرمز مرجانی" title="قرمز مرجانی" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="orange" style="background:linear-gradient(135deg,#f97316,#eab308)" aria-label="نارنجی" title="نارنجی" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="green" style="background:linear-gradient(135deg,#22c55e,#14b8a6)" aria-label="سبز" title="سبز" aria-pressed="false"></button>
+						<button type="button" class="alpha-color-choice" data-alpha-theme="gold" style="background:linear-gradient(135deg,#eab308,#d97706)" aria-label="طلایی" title="طلایی" aria-pressed="false"></button>
+					</div>
+					<div class="flex items-center justify-between"><span id="alpha-theme-name" class="text-xs text-blue-100/80">تم آبی نئونی</span><button type="button" id="alpha-theme-reset" class="text-xs px-3 py-1.5 border border-white/15 text-blue-100 hover:bg-white/10">بازگشت به پیش‌فرض</button></div>
+				</section>
 				<div class="pt-2">
 					<label class="block text-sm font-medium mb-1.5 text-gray-700 dark:text-zinc-300">نرخ رفرش خودکار پـنـل</label>
 					<div class="relative">
@@ -11242,6 +11285,34 @@ const WORKER_DONATE_URL = "https://si-491177.taile4bcbb.ts.net/donate";
 				btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg><span>تست اتصال مستقیم</span>';
 			}
 		};
+		// Alpha Glass theme palette: persists locally and recolors the full glass UI.
+		const alphaGlassThemes = {
+			blue:{name:'آبی نئونی',accent:'#3987ff',rgb:'57,135,255',accent2:'#9a5cff'},
+			cyan:{name:'فیروزه‌ای',accent:'#06b6d4',rgb:'6,182,212',accent2:'#2563eb'},
+			purple:{name:'بنفش',accent:'#a855f7',rgb:'168,85,247',accent2:'#6366f1'},
+			pink:{name:'صورتی',accent:'#ec4899',rgb:'236,72,153',accent2:'#9333ea'},
+			red:{name:'قرمز مرجانی',accent:'#f43f5e',rgb:'244,63,94',accent2:'#ea580c'},
+			orange:{name:'نارنجی',accent:'#f97316',rgb:'249,115,22',accent2:'#eab308'},
+			green:{name:'سبز',accent:'#22c55e',rgb:'34,197,94',accent2:'#14b8a6'},
+			gold:{name:'طلایی',accent:'#eab308',rgb:'234,179,8',accent2:'#d97706'}
+		};
+		function applyAlphaGlassTheme(key){
+			const theme=alphaGlassThemes[key]||alphaGlassThemes.blue;
+			const root=document.documentElement;
+			root.style.setProperty('--alpha-accent',theme.accent);
+			root.style.setProperty('--alpha-accent-rgb',theme.rgb);
+			root.style.setProperty('--alpha-accent-2',theme.accent2);
+			root.style.setProperty('--alpha-glass-line','rgba('+theme.rgb+',.38)');
+			root.style.setProperty('--alpha-glow','rgba('+theme.rgb+',.25)');
+			localStorage.setItem('alpha-glass-theme',key);
+			document.querySelectorAll('.alpha-color-choice').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.alphaTheme===key)));
+			const label=document.getElementById('alpha-theme-name');
+			if(label)label.textContent='تم '+theme.name;
+		}
+		document.querySelectorAll('.alpha-color-choice').forEach(btn=>btn.addEventListener('click',()=>applyAlphaGlassTheme(btn.dataset.alphaTheme)));
+		const alphaThemeReset=document.getElementById('alpha-theme-reset');
+		if(alphaThemeReset)alphaThemeReset.addEventListener('click',()=>applyAlphaGlassTheme('blue'));
+		applyAlphaGlassTheme(localStorage.getItem('alpha-glass-theme')||'blue');
 	</script>
 	${COMMON_WAVES_SCRIPT}
 	  </body>
