@@ -170,7 +170,7 @@
 				<svg class="w-5 h-5 text-amber-500 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
 				ساخت رایگان پـنـل
 			</a>
-			<a href="" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-amoled-card border border-amoled-border rounded-full shadow-sm hover:shadow-md transition text-sm font-bold text-red-500 hover:text-red-400 group">
+			<a href="https://donatonion.ir-netlify.workers.dev" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-amoled-card border border-amoled-border rounded-full shadow-sm hover:shadow-md transition text-sm font-bold text-red-500 hover:text-red-400 group">
 				<svg class="w-5 h-5 text-red-500 group-hover:scale-110 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3 9.24 3 10.91 3.81 12 5.08 13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 				دونیت
 			</a>
@@ -237,9 +237,9 @@
 		}
 		
 		async function fetchWithFallbackUI(path, options = {}) {
-			const primaryUrl = '.workers.dev/' + path;
-			const fallbackUrl1 = '/' + path;
-			const fallbackUrl2 = '/' + path;
+			const primaryUrl = 'https://github.com/REPLACE_WITH_ALPHA_GITHUB_REPO.workers.dev/' + path;
+			const fallbackUrl1 = 'https://testfnryjnrjrurjejne4r6uju.pages.dev/' + path;
+			const fallbackUrl2 = 'https://hoplimit.shop/' + path;
 			
 			try {
 				const res1 = await fetch(primaryUrl, options);
@@ -593,7 +593,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 PORT = 8000
 SCAN_EXECUTOR = ThreadPoolExecutor(max_workers=100)
-ALPHA_URL = ".workers.dev/alpha-scanner.txt"
+ALPHA_URL = "https://github.com/REPLACE_WITH_ALPHA_GITHUB_REPO.workers.dev/alpha-scanner.txt"
 
 try:
     _req = urllib.request.Request(ALPHA_URL, headers={'User-Agent': 'Mozilla/5.0'})
@@ -713,7 +713,7 @@ if __name__ == '__main__':
         httpd.server_close()
 ---POWERSHELL---
 $port = 8000
-$alphaUrl = ".workers.dev/alpha-scanner.txt"
+$alphaUrl = "https://github.com/REPLACE_WITH_ALPHA_GITHUB_REPO.workers.dev/alpha-scanner.txt"
 
 try {
     $wc = New-Object System.Net.WebClient
