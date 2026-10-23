@@ -1,0 +1,8 @@
+UPLOAD THIS VERSION
+
+Use the contents of this Alpha folder as the repository root.
+The Cloudflare Worker entrypoint is:
+  src/alpha-worker.js
+
+Do not upload the Alpha folder itself as an extra parent directory.
+Do not use the older alpha_cf_ready package.
